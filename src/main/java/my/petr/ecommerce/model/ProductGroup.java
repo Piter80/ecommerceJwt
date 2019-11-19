@@ -17,7 +17,7 @@ public class ProductGroup {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Integer id;
+  private Long id;
   @Column(name = "group_name")
   private String groupName;
   private String price;

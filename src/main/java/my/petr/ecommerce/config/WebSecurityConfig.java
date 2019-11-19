@@ -41,7 +41,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         .anyRequest().authenticated()
 
-        .antMatchers("/user/**").permitAll()
+        //.antMatchers("/user/**").permitAll()
         .and().formLogin().successHandler(authenticationSuccessHandler)
         .failureHandler(authenticationFailureHandler)
 
