@@ -15,7 +15,7 @@ public class GroupVariant {
     private Integer id;
     @Column(name = "variant_name")
     private String variantName;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private ProductGroup group;
 
 }

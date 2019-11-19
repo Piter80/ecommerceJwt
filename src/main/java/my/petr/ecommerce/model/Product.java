@@ -16,7 +16,7 @@ public class Product {
     private String name;
     private String created;
     private String price;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "group_id")
     private ProductGroup group;
 }

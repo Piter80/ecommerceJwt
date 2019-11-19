@@ -19,4 +19,12 @@ public class EcommerceService {
   public Product getProduct(long id) {
     return productRepository.findOne(id);
   }
+
+  public Product saveProduct(Product product) {
+    return productRepository.save(product);
+  }
+
+  public void deleteProduct(Long id) {
+    productRepository.delete(id);
+  }
 }

@@ -18,8 +18,7 @@ public class ProductGroup {
     @Column(name = "group_name")
     private String groupName;
     private String price;
-    //@Temporal(TemporalType.TIMESTAMP)
     private String created;
-    @OneToMany(mappedBy = "group", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<GroupVariant> groupVariants = new ArrayList<>();
 }
